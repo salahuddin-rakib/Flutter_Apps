@@ -30,3 +30,13 @@ step-5: Then go to pubspec.yaml file and add font's family and asset path. That'
 step-1: First create a class that extends StatelessWidget.
 step-2: Then add all of your widgets into build function of that class.
 step-3: Then hot restart the project. That's it. Now if you change anything and save then you will those changes into emulator.
+
+# Steps for adding image into project
+step-1: Take Image widget and it's image property.
+step-2: For online image add NetworkImage widget and inside it give an online image link as string.
+step-3: For assets image add a folder called assets/ images into project.
+step-4: Then paste those images into that folder which you want to use in project.
+step-5: After that you need to add those images path into pubspec.yaml file.
+step-6: Then inside Image widget add another widget called AssetImage widget.
+step-6: Inside AssetImage widget add assets path and save it.
+step-4: That's it, after all of this you will see that image. 
