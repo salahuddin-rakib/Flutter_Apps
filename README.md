@@ -18,3 +18,10 @@ samples, guidance on mobile development, and a full API reference.
 # Steps to Enable web-emulator
 first_command: flutter config --enable-web
 second_command: flutter run -d chrome
+
+# Steps to add custom font
+step-1: First go to google fonts website.
+step-2: Choose a font and download that font.
+step-3: Unzip that font's zip folder and create a folder named fonts in your project.
+step-4: Copy the font's ttf file and paste that file into your project's font folder.
+step-5: Then go to pubspec.yaml file and add font's family and asset path. That's it, you are good to go.
