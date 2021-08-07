@@ -15,28 +15,45 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
-      body: Row(
-        // MainAxisAlignment aligned widgets vertically of that row. It has different options like: center, spaceEvenly, spaceBetween, etc.
-        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        // mainAxisAlignment: MainAxisAlignment.center,
-        // mainAxisAlignment: MainAxisAlignment.spaceAround,
-        // mainAxisAlignment: MainAxisAlignment.end,
+      body: Column(
+        // MainAxisAlignment and CrossAxisAlignment works differently but functions are same.
+        // For Column widget MainAxisAlignment aligned widget horizontally.
+        // For Column widget CrossAxisAlignment aligned widget vertically.
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
-        // CrossAxisAlignment aligned widgets horizontally of that row. It has different options like: center, end, start, etc.
-        // crossAxisAlignment: CrossAxisAlignment.start,
+        // mainAxisAlignment: MainAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         // crossAxisAlignment: CrossAxisAlignment.end,
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text('Inside row.'),
-          TextButton(
-            onPressed: () {},
-            child: Text('Click me'),
+          // We can use Row widget inside an Column widget.
+          // Row(
+          //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          //   crossAxisAlignment: CrossAxisAlignment.center,
+          //   children: [
+          //     Text('Hello'),
+          //     BackButton(
+          //       onPressed: () {},
+          //       color: Colors.blue,
+          //     ),
+          //     ElevatedButton(
+          //       onPressed: () {},
+          //       child: Text('Hello World'),
+          //     ),
+          //   ],
+          // ),
+          Container(
+            padding: EdgeInsets.all(20.0),
+            color: Colors.cyan,
+            child: Text('One'),
           ),
           Container(
-            color: Colors.amber,
             padding: EdgeInsets.all(30.0),
-            child: Text('Inside container'),
+            color: Colors.pinkAccent,
+            child: Text('Two'),
+          ),
+          Container(
+            padding: EdgeInsets.all(40.0),
+            color: Colors.amberAccent,
+            child: Text('Three'),
           ),
         ],
       ),
