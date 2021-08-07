@@ -15,37 +15,30 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
+      body: Row(
+        // MainAxisAlignment aligned widgets vertically of that row. It has different options like: center, spaceEvenly, spaceBetween, etc.
+        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        // mainAxisAlignment: MainAxisAlignment.center,
+        // mainAxisAlignment: MainAxisAlignment.spaceAround,
+        // mainAxisAlignment: MainAxisAlignment.end,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
-      // Container example:
-      // body: Container(
-      //   // Padding example
-      //
-      //   // It will take 30 pixel padding all around of it's body.
-      //   // padding: EdgeInsets.all(30.0),
-      //
-      //   // It will take 10 pixel Left, 20 pixel Top, 30 pixel Right and 40 pixel bottom padding around it's body.
-      //   // padding: EdgeInsets.fromLTRB(10, 20, 30, 40),
-      //
-      //   // It will take 10 pixel horizontally and 20 pixel vertically padding around it's body.
-      //   padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
-      //
-      //   // It will take 10 pixel margin all around of it's body.
-      //   // margin: EdgeInsets.all(10.0),
-      //
-      //   // It will take 10 pixel horizontally and 20 pixel vertically margin around it's body.
-      //   // We can also use all functions here like padding.
-      //   margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
-      //
-      //   // If we don't give any child then it will take whole body space.
-      //   color: Colors.grey[400],
-      //   child: Text('Hello'),
-      // ),
-
-      // If we only want to use padding into a text without container, we should do that this way.
-      // We can't use margin or color widgets inside Padding widget. To do that we should use Container widget.
-      body: Padding(
-        padding: EdgeInsets.all(30.0),
-        child: Text('Hello'),
+        // CrossAxisAlignment aligned widgets horizontally of that row. It has different options like: center, end, start, etc.
+        // crossAxisAlignment: CrossAxisAlignment.start,
+        // crossAxisAlignment: CrossAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Text('Inside row.'),
+          TextButton(
+            onPressed: () {},
+            child: Text('Click me'),
+          ),
+          Container(
+            color: Colors.amber,
+            padding: EdgeInsets.all(30.0),
+            child: Text('Inside container'),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
