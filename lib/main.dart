@@ -16,20 +16,56 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.red[600],
       ),
       body: Center(
-        // Displaying an online image in app
-        // child: Image(
-        //   image: NetworkImage('https://images.unsplash.com/photo-1508402476522-c77c2fa4479d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80'),
+        // Icon adding to the project.
+        // child: Icon(
+        //   Icons.airport_shuttle,
+        //   color: Colors.lightBlue,
+        //   size: 100.0,
         // ),
-        // Shortcut of online image showing
-        // child: Image.network(
-        //     'https://images.unsplash.com/photo-1508402476522-c77c2fa4479d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60'),
 
-        // Displaying an assets image in app
-        // child: Image(
-        //   image: AssetImage('assets/stars-3.jpeg'),
+        // ***** Example of different types of button *****
+
+        // ElevatedButton example
+        // child: ElevatedButton(
+        //   onPressed: () {},
+        //   child: Text('click me'),
         // ),
-        // Shortcut of assets image showing
-        child: Image.asset('assets/stars-1.jpeg'),
+
+        // TextButton example
+        // child: TextButton(
+        //   onPressed: () {},
+        //   child: Text('click me'),
+        // ),
+
+        // Adding something workable to onPressed action
+        // child: ElevatedButton(
+        //   onPressed: () {
+        //     print('You clicked me.');
+        //   },
+        //   child: Text('click me'),
+        // ),
+
+        // Adding a Icon and Text Button
+        // child: ElevatedButton.icon(
+        //   onPressed: () {},
+        //   icon: Icon(
+        //     Icons.mail,
+        //     color: Colors.amber,
+        //   ),
+        //   label: Text('mail me'),
+        // ),
+
+        // Example of IconButton
+        child: IconButton(
+          onPressed: () {
+            print('You clicked me.');
+          },
+          icon: Icon(
+            Icons.alternate_email,
+            size: 35.0,
+          ),
+          color: Colors.amber,
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
